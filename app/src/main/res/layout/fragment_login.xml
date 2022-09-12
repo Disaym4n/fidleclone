@@ -12,17 +12,89 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:paddingHorizontal="20dp">
+        android:paddingHorizontal="20dp"
+        >
 
+        <ImageView
+            android:id="@+id/fidle_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="25dp"
+            android:src="@drawable/ic_fidle_logo"
+            android:contentDescription="@string/todo" />
 
-    <Button
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fidle_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/login_to_start_earning"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            app:layout_constraintTop_toBottomOf="@id/login_text"
+            android:layout_marginVertical="40dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:shadowColor="@android:color/transparent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Password"
+            app:layout_constraintTop_toBottomOf="@id/username_layout"
+            android:layout_marginTop="25dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/forgot"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/password_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/forgot_password"
+            android:layout_marginTop="10dp" />
+
+        <Button
         android:id="@+id/login_btn"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:text="login"
+        android:text="@string/login"
         android:backgroundTint="@color/blue"
         app:layout_constraintTop_toBottomOf="@id/forgot"
-        android:layout_marginTop="80dp"
+        android:layout_marginVertical="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
