@@ -18,4 +18,5 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="login">login</string>
     <string name="Password">Password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
 </resources>
